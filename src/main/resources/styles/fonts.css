@@ -1,0 +1,10 @@
+@font-face {
+    -fx-font-family: 'Lexend';
+    src: url(font/Lexend-Regular.ttf);
+}
+
+.label, .button, .hyperlink, .toggle-button {
+    -fx-font-family: 'Lexend';
+    -fx-font-weight: 400;
+    -fx-font-size: 15px;
+}

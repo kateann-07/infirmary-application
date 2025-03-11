@@ -1,0 +1,17 @@
+.button {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-text-fill: #737791;
+}
+
+.button:focused {
+    -fx-background-color: #066C3D;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #066C3D;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.120), 8, 0, 0, 5);
+}
+
