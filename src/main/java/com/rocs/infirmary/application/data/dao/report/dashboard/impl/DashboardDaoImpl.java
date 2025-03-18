@@ -15,7 +15,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
+/**
+ * The DashboardDaoImpl class implements the DashboardDao interface
+ * It includes methods for notification of stock level of medicine and reports on common ailments, frequent visit, and medication trend.
+ */
 public class DashboardDaoImpl implements DashboardDao {
 
 
@@ -31,7 +34,7 @@ public class DashboardDaoImpl implements DashboardDao {
 
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                LowStockReport item = new LowStockReport(resultSet.getString("description"), resultSet.getInt("quantity_available"));
+                LowStockReport item = new LowStockReport(resultSet.getString("item_name"), resultSet.getInt("quantity"));
                 lowStockItems.add(item);
             }
         } catch (SQLException e) {
@@ -136,7 +139,7 @@ public class DashboardDaoImpl implements DashboardDao {
                 MedicationTrendReport report = new MedicationTrendReport();
                 report.setUsage(rs.getInt("usage"));
                 report.setMedicineName(rs.getString("item_name"));
-                report.setStocks(rs.getInt("quantity_available"));
+                report.setStocks(rs.getInt("quantity"));
 
                 reportList.add(report);
             }
