@@ -8,14 +8,42 @@
     src: url(font/Jost-SemiBold.ttf);
 }
 
-.label-clinic-visit {
-    -fx-font-family: 'Jost';
-    -fx-font-weight: 600;
-    -fx-text-fill: black;
+@font-face {
+    -fx-font-family: 'Poppins-SemiBold';
+    src: url(font/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    -fx-font-family: 'Poppins-Medium';
+    src: url(font/Poppins-Medium.ttf);
 }
 
 .label, .button, .hyperlink, .toggle-button {
     -fx-font-family: 'Lexend';
     -fx-font-weight: 400;
     -fx-font-size: 15px;
+}
+
+.label-main-logo {
+    -fx-font-family: 'Jost';
+    -fx-font-weight: 900;
+    -fx-text-fill: black;
+}
+
+.label-dashboard-reports {
+    -fx-font-family: 'Poppins-SemiBold';
+    -fx-font-weight: 900;
+    -fx-text-fill: black;
+}
+
+.label-dashboard-infos {
+    -fx-font-family: 'Poppins-Medium';
+    -fx-font-weight: 400;
+    -fx-text-fill: black;
+}
+
+.label-clinic-visit {
+    -fx-font-family: 'Jost';
+    -fx-font-weight: 600;
+    -fx-text-fill: black;
 }
