@@ -3,6 +3,17 @@
     src: url(font/Lexend-Regular.ttf);
 }
 
+@font-face {
+    -fx-font-family: 'Jost';
+    src: url(font/Jost-SemiBold.ttf);
+}
+
+.label-clinic-visit {
+    -fx-font-family: 'Jost';
+    -fx-font-weight: 600;
+    -fx-text-fill: black;
+}
+
 .label, .button, .hyperlink, .toggle-button {
     -fx-font-family: 'Lexend';
     -fx-font-weight: 400;
