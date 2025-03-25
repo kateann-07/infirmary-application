@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class InfirmaryApplication extends Application {
 
@@ -13,7 +12,7 @@ public class InfirmaryApplication extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(getClass().getResource("/views/dashboard.fxml"));
+        loader.setLocation(getClass().getResource("/views/mainpage.fxml"));
 
         BorderPane mainLayout;
         mainLayout = loader.load();
