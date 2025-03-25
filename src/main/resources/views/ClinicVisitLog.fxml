@@ -30,7 +30,7 @@
                     <HBox prefHeight="90.0" prefWidth="471.0" />
                     <HBox alignment="CENTER" prefHeight="90.0" prefWidth="130.0">
                         <children>
-                            <ToggleButton fx:id="notificationButton" layoutX="205.0" layoutY="146.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: #f0f0f0;">
+                            <ToggleButton fx:id="toggleNotification" layoutX="205.0" layoutY="146.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: #f0f0f0;">
                                 <graphic>
                                     <ImageView fx:id="notificationBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="45.0" fitWidth="61.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                         <image>
@@ -59,11 +59,11 @@
                                             <Image url="@../assets/profile-icon.png" />
                                         </image>
                                     </ImageView>
-                                    <ToggleButton fx:id="dropdownProfile" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: #f0f0f0;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <ToggleButton fx:id="toggleDropdownProfile" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: #f0f0f0;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                         <graphic>
-                                            <ImageView fx:id="dropdownAccountBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="32.0" fitWidth="26.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                            <ImageView fx:id="dropdownAccount" accessibleRole="TOGGLE_BUTTON" fitHeight="32.0" fitWidth="26.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                                 <image>
-                                                    <Image url="@../assets/Dropdown-icon.png" />
+                                                    <Image url="@../assets/dropdown-icon.png" />
                                                 </image>
                                             </ImageView>
                                         </graphic>
@@ -92,7 +92,7 @@
                   <HBox prefHeight="100.0" prefWidth="200.0" />
                   <HBox prefHeight="61.0" prefWidth="172.0">
                      <children>
-                        <ToggleButton fx:id="addEntryBtn" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="59.0" prefWidth="149.0" style="-fx-font-size: 18; -fx-background-color: #1976D2;" styleClass="add-entry-btn" stylesheets="@../styles/buttons.css" text="Add Entry" textFill="WHITE">
+                        <ToggleButton fx:id="toggleAddEntry" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="59.0" prefWidth="149.0" style="-fx-font-size: 18; -fx-background-color: #1976D2;" styleClass="add-entry-btn" stylesheets="@../styles/buttons.css" text="Add Entry" textFill="WHITE">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
@@ -140,30 +140,30 @@
                               <Insets />
                            </opaqueInsets>
                         </Label>
-                        <ToggleButton fx:id="dropdownRowBtn" minWidth="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2">
+                        <ToggleButton fx:id="toggleDropdownRow" minWidth="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2">
                            <graphic>
-                              <ImageView fx:id="dropdownAccountBtn1" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="dropdownRowBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../assets/Dropdown-icon.png" />
+                                    <Image url="@../assets/dropdown-icon.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </ToggleButton>
                         <Label style="-fx-font-size: 14;" stylesheets="@../styles/fonts.css" text="1-5 of 13" GridPane.columnIndex="3" />
-                        <ToggleButton fx:id="leftBtn" minWidth="44.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="4">
+                        <ToggleButton fx:id="toggleLeft" minWidth="44.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="4">
                            <graphic>
-                              <ImageView fx:id="leftBtn1" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" rotate="92.9">
+                              <ImageView fx:id="leftBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" rotate="92.9">
                                  <image>
-                                    <Image url="@../assets/Dropdown-icon.png" />
+                                    <Image url="@../assets/dropdown-icon.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </ToggleButton>
-                        <ToggleButton fx:id="rightBtn" minWidth="44.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="5">
+                        <ToggleButton fx:id="toggleRight" minWidth="44.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="5">
                            <graphic>
-                              <ImageView fx:id="rightBtn1" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                              <ImageView fx:id="rightBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
                                  <image>
-                                    <Image url="@../assets/Dropdown-icon.png" />
+                                    <Image url="@../assets/dropdown-icon.png" />
                                  </image>
                               </ImageView>
                            </graphic>
