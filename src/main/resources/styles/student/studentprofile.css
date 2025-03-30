@@ -1,0 +1,188 @@
+#StudentHealthProfileLabel{
+-fx-font-family: 'Lexend';
+    -fx-font-weight: 400;
+-fx-font-size: 25px;
+
+}
+
+#SearchTextField{
+-fx-border-color: lightgray;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+#notification_img{
+-fx-background-image-radius:25px;
+
+}
+
+#Adviser_Label{
+
+-fx-font-weight: none;
+-fx-font-size: 12px;
+
+
+}
+
+
+
+
+#Filter_Button_A,#Filter_Button_Z,#ClearFilterButton, #AgeFilterBtn {
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+    -fx-text-fill: #737791;
+    -fx-border-width: 1px;
+    -fx-border-color: #d3d3d3;
+
+}
+
+#Filter_Button_A:focused {
+    -fx-background-color: #066C3D;
+    -fx-text-fill: white;
+}
+#Filter_Button_Z:focused {
+    -fx-background-color: #066C3D;
+    -fx-text-fill: white;
+}
+#ClearFilterButton:focused {
+
+    -fx-background-color: #066C3D;
+    -fx-text-fill: white;
+}
+
+#AgeFilterBtn :focused{
+    -fx-background-color: #066C3D;
+    -fx-text-fill: white;
+}
+
+
+#Filter_Button_A:hover {
+   -fx-background-color: #066C3D;
+    -fx-text-fill: white;
+
+}
+
+#Filter_Button_Z:hover {
+       -fx-background-color: #066C3D;
+       -fx-text-fill: white;
+
+}
+#ClearFilterButton:hover {
+      -fx-background-color: #066C3D;
+      -fx-text-fill: white;
+
+}
+
+#AgeFilterBtn:hover{
+ -fx-background-color: #066C3D;
+ -fx-text-fill: white;
+}
+
+
+#SexComboBox, #SectionComboBox{
+     -fx-background-color: #ffffff;
+     -fx-border-color: #d3d3d3;
+     -fx-border-radius: 10px;
+     -fx-font-size: 14px;
+
+}
+
+#AgeComboBox .cell {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+      -fx-translate-x: 10px;
+        -fx-translate-y: 2px;
+
+}
+
+#SexComboBox .cell {
+-fx-alignment: center;
+    -fx-text-alignment: center;
+      -fx-translate-x: 11px;
+        -fx-translate-y: 1px;
+
+}
+
+
+
+#SectionComboBox .cell {
+-fx-alignment: center;
+    -fx-text-alignment: center;
+      -fx-translate-x: 10px;
+        -fx-translate-y: 1px;
+
+}
+
+
+#SexComboBox .text-field,
+#SectionComboBox .text-field {
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+
+
+
+
+.table-view {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #d3d3d3;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-color: transparent;
+
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #ffffff;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment:CENTER-LEFT;
+
+
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #cfcfcf;
+}
+
+.table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-cell {
+    -fx-padding: 10px;
+    -fx-alignment: CENTER-LEFT;
+}
+
+#InventorySideBar{
+
+ -fx-translate-y: 20px;
+}
+#MessageSideBar {
+-fx-translate-y: 35px; /* y down */
+}
+
+#ImageDashboard {
+-fx-translate-x: -10px;
+}
+
+#ImageClinic {
+-fx-translate-x: -3px;
+}
+#ImageInventory{
+ -fx-translate-x: -17px;
+}
+
+#ImageMessage{
+ -fx-translate-x: -17px;
+
+}

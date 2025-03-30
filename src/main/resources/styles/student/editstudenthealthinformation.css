@@ -1,0 +1,52 @@
+@font-face {
+    -fx-font-family: 'Lexend';
+    src: url(font/Lexend-Regular.ttf);
+}
+
+#LabelEditInformation{
+ -fx-font-weight: 700;
+-fx-font-size: 25px;
+}
+#LabelStudent,#LabelStudentHealth{
+ -fx-font-weight: 700;
+ -fx-font-size:16px;
+}
+
+#LabelLRN,#LabelFirstname,#LabelLastname,#LabelSex,#LabelAge,#LabelGradeLevel,#LabelSection,#LabelContactNumber,#LabelHomeAddress,#LabelEmailAddress,#LabelEmailAddress{
+-fx-font-size:14px;
+
+}
+
+
+#ButtonConfirm {
+
+
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+#ButtonCancel{
+-fx-background-color:#FFFFFF;
+-fx-border-width: 1px;
+-fx-border-color: black;
+-fx-border-radius:10px;
+}
+#ButtonAddField{
+-fx-background-color:#000000;
+-fx-text-fill:#FFFFFF;
+-fx-border-radius:10px;
+
+}
+
+#TextFieldValue1 {
+-fx-border-color: lightgray;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+#TextFieldValue2{
+-fx-border-color: lightgray;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
