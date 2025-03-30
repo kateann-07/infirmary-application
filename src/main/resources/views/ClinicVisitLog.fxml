@@ -32,7 +32,7 @@
                         <children>
                             <ToggleButton fx:id="toggleNotification" layoutX="205.0" layoutY="146.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: #f0f0f0;">
                                 <graphic>
-                                    <ImageView fx:id="notificationBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="45.0" fitWidth="61.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView accessibleRole="TOGGLE_BUTTON" fitHeight="45.0" fitWidth="61.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                         <image>
                                             <Image url="@../assets/notification-icon.png" />
                                         </image>
@@ -61,7 +61,7 @@
                                     </ImageView>
                                     <ToggleButton fx:id="toggleDropdownProfile" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: #f0f0f0;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                         <graphic>
-                                            <ImageView fx:id="dropdownAccount" accessibleRole="TOGGLE_BUTTON" fitHeight="32.0" fitWidth="26.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                            <ImageView accessibleRole="TOGGLE_BUTTON" fitHeight="32.0" fitWidth="26.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                                 <image>
                                                     <Image url="@../assets/dropdown-icon.png" />
                                                 </image>
@@ -93,8 +93,8 @@
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="133.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="551.0" minWidth="10.0" prefWidth="355.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="514.0" minWidth="10.0" prefWidth="368.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="242.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="514.0" minWidth="10.0" prefWidth="445.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="165.0" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
@@ -106,14 +106,21 @@
                               <Insets />
                            </opaqueInsets>
                         </TextField>
-                        <ToggleButton fx:id="toggleAddEntry" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" style="-fx-font-size: 18; -fx-background-color: #1976D2; -fx-border-radius: 5;" styleClass="add-entry-btn" text="Add Entry" textFill="WHITE" GridPane.columnIndex="3">
+                        <VBox prefHeight="67.0" prefWidth="179.0" GridPane.columnIndex="3">
+                           <children>
+                              <ToggleButton fx:id="toggleAddEntry" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="67.0" prefWidth="125.0" style="-fx-font-size: 18; -fx-background-color: #1976D2; -fx-border-radius: 5;" styleClass="add-entry-btn" text="Add Entry" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ToggleButton>
+                           </children>
                            <padding>
-                              <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                            <GridPane.margin>
-                              <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </GridPane.margin>
-                        </ToggleButton>
+                        </VBox>
                      </children>
                   </GridPane>
                   <GridPane prefHeight="871.0" prefWidth="1100.0">
@@ -169,7 +176,7 @@
                                           </Label>
                                           <ToggleButton fx:id="toggleDropdownRow" minWidth="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2">
                                              <graphic>
-                                                <ImageView fx:id="dropdownRowBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../assets/dropdown-icon.png" />
                                                    </image>
@@ -179,7 +186,7 @@
                                           <Label style="-fx-font-size: 14;" stylesheets="@../styles/fonts.css" text="1-5 of 13" GridPane.columnIndex="3" />
                                           <ToggleButton fx:id="toggleLeft" minWidth="44.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="4">
                                              <graphic>
-                                                <ImageView fx:id="leftBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../assets/left-icon.png" />
                                                    </image>
@@ -188,7 +195,7 @@
                                           </ToggleButton>
                                           <ToggleButton fx:id="toggleRight" minWidth="44.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="5">
                                              <graphic>
-                                                <ImageView fx:id="rightBtn" accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView accessibleRole="TOGGLE_BUTTON" fitHeight="29.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../assets/right-icon.png" />
                                                    </image>
