@@ -1,14 +1,5 @@
-@font-face {
-    -fx-font-family: 'Lexend';
-    src: url(font/Lexend-Regular.ttf);
-}
 
 
-
-#ButtonEditHealthInfo {
-fx-font-weight: 400;
-    -fx-font-size: 15px;
-}
 
 .table-view .column-header-background {
     -fx-background-color: #ffffff;
@@ -77,4 +68,4 @@ fx-font-weight: 400;
 }
 #EmailAddressLabel{-fx-font-size: 14px;}
 #AddressLabel{-fx-font-size: 14px;}
-#HealthProbLabel{-fx-font-size: 14px;}
+#HealthProbLabel{-fx-font-size: 16px;}

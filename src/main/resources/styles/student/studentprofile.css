@@ -1,6 +1,6 @@
 #StudentHealthProfileLabel{
--fx-font-family: 'Lexend';
-    -fx-font-weight: 400;
+
+-fx-font-weight: 400;
 -fx-font-size: 25px;
 
 }
@@ -26,67 +26,6 @@
 
 
 
-
-#Filter_Button_A,#Filter_Button_Z,#ClearFilterButton, #AgeFilterBtn {
-    -fx-background-color: #FFFFFF;
-    -fx-border-radius: 10px;
-    -fx-padding: 10px;
-    -fx-text-fill: #737791;
-    -fx-border-width: 1px;
-    -fx-border-color: #d3d3d3;
-
-}
-
-#Filter_Button_A:focused {
-    -fx-background-color: #066C3D;
-    -fx-text-fill: white;
-}
-#Filter_Button_Z:focused {
-    -fx-background-color: #066C3D;
-    -fx-text-fill: white;
-}
-#ClearFilterButton:focused {
-
-    -fx-background-color: #066C3D;
-    -fx-text-fill: white;
-}
-
-#AgeFilterBtn :focused{
-    -fx-background-color: #066C3D;
-    -fx-text-fill: white;
-}
-
-
-#Filter_Button_A:hover {
-   -fx-background-color: #066C3D;
-    -fx-text-fill: white;
-
-}
-
-#Filter_Button_Z:hover {
-       -fx-background-color: #066C3D;
-       -fx-text-fill: white;
-
-}
-#ClearFilterButton:hover {
-      -fx-background-color: #066C3D;
-      -fx-text-fill: white;
-
-}
-
-#AgeFilterBtn:hover{
- -fx-background-color: #066C3D;
- -fx-text-fill: white;
-}
-
-
-#SexComboBox, #SectionComboBox{
-     -fx-background-color: #ffffff;
-     -fx-border-color: #d3d3d3;
-     -fx-border-radius: 10px;
-     -fx-font-size: 14px;
-
-}
 
 #AgeComboBox .cell {
     -fx-alignment: center;
