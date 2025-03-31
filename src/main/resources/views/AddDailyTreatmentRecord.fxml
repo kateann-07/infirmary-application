@@ -240,7 +240,7 @@
                            <graphic>
                               <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../assets/calendar (1).png" />
+                                    <Image url="@../assets/calendar-icon.png" />
                                  </image>
                               </ImageView>
                            </graphic>
