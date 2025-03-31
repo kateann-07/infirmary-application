@@ -62,9 +62,9 @@
                                     <ToggleButton fx:id="toggleDropdownProfile" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: #f0f0f0;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                         <graphic>
                                             <ImageView accessibleRole="TOGGLE_BUTTON" fitHeight="32.0" fitWidth="26.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
-                                                <image>
-                                                    <Image url="@../assets/dropdown-icon.png" />
-                                                </image>
+                                       <image>
+                                          <Image url="@../assets/dropdown-icon.png" />
+                                       </image>
                                             </ImageView>
                                         </graphic>
                                     </ToggleButton>
