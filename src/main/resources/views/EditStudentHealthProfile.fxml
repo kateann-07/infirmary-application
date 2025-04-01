@@ -31,7 +31,6 @@
       <Label fx:id="LabelHealthProblem" layoutX="448.0" layoutY="127.0" prefHeight="20.0" prefWidth="122.0" text="Health Problems" />
       <Button fx:id="ButtonAddField" layoutX="580.0" layoutY="122.0" mnemonicParsing="false" text="Add Field" />
       <TextField fx:id="TextFieldAddingHealthProblem1" layoutX="448.0" layoutY="162.0" prefHeight="36.0" prefWidth="262.0" promptText="Health Problems Adding Field" />
-      <TextField fx:id="TextFieldAddingHealthProblem2" layoutX="448.0" layoutY="214.0" prefHeight="36.0" prefWidth="262.0" promptText="Health Problems Adding Field" />
       <Button fx:id="ButtonCancel" layoutX="890.0" layoutY="621.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="158.0" text="Cancel" />
       <Button fx:id="ButtonConfirm" layoutX="716.0" layoutY="621.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="158.0" text="Confirm" />
    </children>
