@@ -12,48 +12,21 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1420.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rocs.infirmary.application.controller.student.profile.StudentHealthProfilePage">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1420.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <padding>
         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
     </padding>
 
     <Label fx:id="welcomeText" />
-    <left>
-        <VBox prefHeight="764.0" prefWidth="293.0" BorderPane.alignment="CENTER">
-            <children>
-                <Button fx:id="dashboardBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="250.0" styleClass="sidebar-button" stylesheets="@../styles/buttons.css" text="Dashboard">
-                    <VBox.margin>
-                        <Insets bottom="20.0" />
-                    </VBox.margin></Button>
-                <Button fx:id="clinicVisitLogBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="250.0" styleClass="sidebar-button" text="Clinic Visit Log">
-                    <VBox.margin>
-                        <Insets bottom="20.0" />
-                    </VBox.margin>
-                    <stylesheets>
-                        <URL value="@../styles/buttons.css" />
-                        <URL value="@../styles/fonts.css" />
-                    </stylesheets>
-                </Button>
-                <Button fx:id="studentHealthProfileBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="250.0" styleClass="sidebar-button" stylesheets="@../styles/buttons.css" text="Students Health Profile">
-                    <VBox.margin>
-                        <Insets bottom="20.0" />
-                    </VBox.margin>
-                </Button>
-                <Button fx:id="inventoryBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="250.0" styleClass="sidebar-button" stylesheets="@../styles/buttons.css" text="Inventory" />
-            </children>
-            <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="50.0" />
-            </padding>
-        </VBox>
-    </left>
     <stylesheets>
-        <URL value="@../styles/student/studentprofile.css" />
-        <URL value="@../styles/fonts.css" />
-        <URL value="@../styles/buttons.css" />
 
+        <URL value="@../styles/fonts.css" />
+        <URL value="@../styles/student/button/buttons.css" />
+        <URL value="@../styles/student/textfield/textfield.css" />
+        <URL value="@../styles/student/table/table.css" />
+        <URL value="@../styles/student/label/lable.css" />
     </stylesheets>
    <center>
       <AnchorPane fx:id="StudentHealthProfilePane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -63,7 +36,6 @@
                   <Font size="13.0" />
                </font>
             </TextField>
-            <Label fx:id="StudentHealthProfileLabel" layoutX="26.0" layoutY="15.0" prefHeight="27.0" prefWidth="285.0" stylesheets="@../styles/fonts.css" text="Student Health Profile" />
             <TableView fx:id="StudentTableView" layoutX="26.0" layoutY="202.0" prefHeight="580.0" prefWidth="1240.0">
               <columns>
                 <TableColumn fx:id="SelectColumn" prefWidth="128.00001525878906" text="Select" />
@@ -108,6 +80,7 @@
                   <Font size="1.0" />
                </font>
             </Button>
+            <Label fx:id="StudentProfileLabel" layoutX="26.0" layoutY="30.0" text="Student Health Profile" />
          </children>
       </AnchorPane>
    </center>

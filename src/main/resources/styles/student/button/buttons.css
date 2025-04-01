@@ -94,12 +94,6 @@
     -fx-transition: 0.3s;
 }
 
-#sidebar {
--fx-background-color: white;
-    -fx-padding: 5px;
-
--fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 10, 0);
-}
 #ShowInformationButton{
 -fx-text-fill: white;
 -fx-background-color: #2196F3;
@@ -193,3 +187,37 @@
 fx-font-weight: 400;
     -fx-font-size: 15px;
 }
+
+#AgeComboBox .cell {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+      -fx-translate-x: 10px;
+        -fx-translate-y: 2px;
+
+}
+
+#SexComboBox .cell {
+-fx-alignment: center;
+    -fx-text-alignment: center;
+      -fx-translate-x: 11px;
+        -fx-translate-y: 1px;
+
+}
+
+
+
+#SectionComboBox .cell {
+-fx-alignment: center;
+    -fx-text-alignment: center;
+      -fx-translate-x: 10px;
+        -fx-translate-y: 1px;
+
+}
+
+
+#SexComboBox .text-field,
+#SectionComboBox .text-field {
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+

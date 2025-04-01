@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<?import javafx.scene.layout.BorderPane?>
-<BorderPane fx:id="EditHeathPane" prefHeight="697.0" prefWidth="1086.0" stylesheets="@../styles/student/editstudenthealthinformation.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rocs.infirmary.application.controller.student.profile.EditStudentHealthProfile">
+<AnchorPane fx:id="EditHeathPane" prefHeight="697.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../styles/fonts.css" />
+      <URL value="@../styles/student/button/buttons.css" />
+      <URL value="@../styles/student/textfield/textfield.css" />
+      <URL value="@../styles/student/table/table.css" />
+      <URL value="@../styles/student/label/lable.css" />
+   </stylesheets>
    <children>
-      <Label fx:id="LabelEditInformation" layoutX="51.0" layoutY="30.0" prefHeight="36.0" prefWidth="484.0" text="EDIT STUDENT HEALTH INFORMATION" />
+      <Label fx:id="LabelEditInformation" layoutX="51.0" layoutY="30.0" prefHeight="36.0" prefWidth="506.0" text="EDIT STUDENT HEALTH INFORMATION" />
       <Label fx:id="LabelStudent" layoutX="51.0" layoutY="91.0" prefHeight="26.0" prefWidth="70.0" text="Student" />
       <Label fx:id="LabelLRN" layoutX="51.0" layoutY="132.0" prefHeight="22.0" prefWidth="277.0" text="LRN" />
       <Label fx:id="LabelFirstname" layoutX="51.0" layoutY="165.0" prefHeight="18.0" prefWidth="278.0" text="Firstname" />
-      <Label fx:id="LabelLastname" layoutX="51.0" layoutY="201.0" prefHeight="20.0" prefWidth="70.0" text="Lastname:" />
+      <Label fx:id="LabelLastname" layoutX="51.0" layoutY="201.0" prefHeight="20.0" prefWidth="78.0" text="Lastname:" />
       <Label fx:id="LabelSex" layoutX="51.0" layoutY="234.0" prefWidth="59.0" text="Sex" />
       <Label fx:id="LabelAge" layoutX="51.0" layoutY="267.0" prefWidth="59.0" text="Age" />
-      <Label fx:id="LabelGradeLevel" layoutX="51.0" layoutY="295.0" prefHeight="20.0" prefWidth="78.0" text="Grade Level" />
+      <Label fx:id="LabelGradeLevel" layoutX="51.0" layoutY="295.0" prefHeight="20.0" prefWidth="90.0" text="Grade Level" />
       <Label fx:id="LabelSection" layoutX="51.0" layoutY="327.0" prefHeight="18.0" prefWidth="70.0" text="Section" />
-      <Label fx:id="LabelContactNumber" layoutX="51.0" layoutY="359.0" prefHeight="20.0" prefWidth="111.0" text="Contact Number" />
-      <Label fx:id="LabelHomeAddress" layoutX="51.0" layoutY="391.0" prefHeight="18.0" prefWidth="94.0" text="Home Address" />
-      <Label fx:id="LabelEmailAddress" layoutX="51.0" layoutY="422.0" prefHeight="18.0" prefWidth="94.0" text="Email Address" />
+      <Label fx:id="LabelContactNumber" layoutX="51.0" layoutY="359.0" prefHeight="20.0" prefWidth="122.0" text="Contact Number" />
+      <Label fx:id="LabelHomeAddress" layoutX="51.0" layoutY="391.0" prefHeight="18.0" prefWidth="111.0" text="Home Address" />
+      <Label fx:id="LabelEmailAddress" layoutX="51.0" layoutY="422.0" prefHeight="18.0" prefWidth="111.0" text="Email Address" />
       <Label fx:id="LabelStudentHealth" layoutX="448.0" layoutY="91.0" prefHeight="26.0" prefWidth="150.0" text="Student Health Info" />
-      <Label fx:id="LabelHealthProblem" layoutX="448.0" layoutY="127.0" prefHeight="20.0" prefWidth="111.0" text="Health Problems" />
-      <Button fx:id="ButtonAddField" layoutX="564.0" layoutY="124.0" mnemonicParsing="false" text="Add Field" />
-      <TextField fx:id="TextFieldValue1" layoutX="448.0" layoutY="160.0" prefHeight="36.0" prefWidth="262.0" promptText="Value" />
-      <TextField fx:id="TextFieldValue2" layoutX="448.0" layoutY="212.0" prefHeight="36.0" prefWidth="262.0" promptText="Value" />
+      <Label fx:id="LabelHealthProblem" layoutX="448.0" layoutY="127.0" prefHeight="20.0" prefWidth="122.0" text="Health Problems" />
+      <Button fx:id="ButtonAddField" layoutX="580.0" layoutY="122.0" mnemonicParsing="false" text="Add Field" />
+      <TextField fx:id="TextFieldValue1" layoutX="448.0" layoutY="162.0" prefHeight="36.0" prefWidth="262.0" promptText="Value" />
+      <TextField fx:id="TextFieldValue2" layoutX="448.0" layoutY="214.0" prefHeight="36.0" prefWidth="262.0" promptText="Value" />
       <Button fx:id="ButtonCancel" layoutX="890.0" layoutY="621.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="158.0" text="Cancel" />
       <Button fx:id="ButtonConfirm" layoutX="716.0" layoutY="621.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="158.0" text="Confirm" />
    </children>
-</BorderPane>
+</AnchorPane>
