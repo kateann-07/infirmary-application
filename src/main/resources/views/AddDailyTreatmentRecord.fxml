@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="130.0" prefWidth="1575.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="DailyTreatmentRecordLabel" style="-fx-font-size: 32;" styleClass="label-add-treatment-record" stylesheets="@../styles/fonts.css" text="DAILY TREATMENT RECORD (STUDENT)">
+               <padding>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="10.0" top="25.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="572.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="182.0" prefWidth="1575.0">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="158.0" prefWidth="1290.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.3333129882812" minWidth="0.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="770.0" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.3333129882812" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="341.3333740234375" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="0.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="61.333343505859375" minHeight="10.0" prefHeight="54.66667175292969" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="80.33332824707031" minHeight="10.0" prefHeight="80.33332824707031" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="studInfoLabel" style="-fx-font-size: 22;" styleClass="label-student-info" stylesheets="@../styles/fonts.css" text="Student Info" GridPane.columnIndex="1">
+                           <padding>
+                              <Insets bottom="20.0" right="10.0" top="20.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="LrnField" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="LRN-text-field" text="LRN" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="nameField" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="name-text-field" text="Name (Last, First M.I)" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="ageField" layoutX="400.0" layoutY="77.0" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="age-text-field" text="Age" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="gradeSectionField" layoutX="789.0" layoutY="77.0" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="grade-section-text-field" text="Grade &amp; Section" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin></TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="55.0" right="5.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="182.0" prefWidth="1575.0">
+               <children>
+                  <GridPane prefHeight="158.0" prefWidth="1290.0" stylesheets="@../styles/fonts.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.3333129882812" minWidth="0.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="770.0" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.3333129882812" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="341.3333740234375" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="0.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="61.333343505859375" minHeight="10.0" prefHeight="54.66667175292969" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.33332824707031" minHeight="10.0" prefHeight="80.33332824707031" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="vitalSignsLabel" style="-fx-font-size: 22;" styleClass="vital-signs-label" stylesheets="@../styles/fonts.css" text="Vital Signs" GridPane.columnIndex="1">
+                           <padding>
+                              <Insets bottom="20.0" right="10.0" top="20.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="bodyTempField" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="body-temp-text-field" text="Body Temperature" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></TextField>
+                        <TextField fx:id="pulseRateField" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="pulse-rate-text-field" text="Pulse Rate" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></TextField>
+                        <TextField fx:id="respiratoryRateField" layoutX="400.0" layoutY="77.0" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="resp-rate-text-field" text="Respiratory Rate" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></TextField>
+                        <TextField fx:id="bloodPressureField" layoutX="789.0" layoutY="77.0" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="blood-pressure-text-field" text="Blood Pressure" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin></TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="55.0" right="5.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="182.0" prefWidth="1575.0">
+               <children>
+                  <GridPane prefHeight="159.0" prefWidth="1290.0" stylesheets="@../styles/fonts.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.3333129882812" minWidth="0.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="770.0" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.3333129882812" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="341.3333740234375" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="0.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="61.333343505859375" minHeight="10.0" prefHeight="54.66667175292969" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.33332824707031" minHeight="10.0" prefHeight="80.33332824707031" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="otherLabel" style="-fx-font-size: 22;" styleClass="other-label" stylesheets="@../styles/fonts.css" text="Other" GridPane.columnIndex="1">
+                           <padding>
+                              <Insets bottom="20.0" right="10.0" top="20.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="chiefComplaitField" opacity="0.6" prefHeight="55.0" prefWidth="486.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="chief-complait-text-field" text="Chief Complait" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></TextField>
+                        <TextField fx:id="nurseInterventionField" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="nurse-intervention-text-field" text="Nurse Intervention" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></TextField>
+                        <TextField fx:id="symptomsField" layoutX="400.0" layoutY="77.0" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="symptoms-text-field" text="Symptoms" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></TextField>
+                        <TextField fx:id="invDispensingInField" layoutX="789.0" layoutY="77.0" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="inv-dispensing-in-text-field" text="Inventory (Dispensing IN)" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="55.0" right="5.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="182.0" prefWidth="1575.0">
+               <children>
+                  <GridPane prefHeight="159.0" prefWidth="1290.0" stylesheets="@../styles/fonts.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.3333129882812" minWidth="0.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="770.0" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.3333129882812" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="341.3333740234375" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="0.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="61.333343505859375" minHeight="10.0" prefHeight="54.66667175292969" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.33332824707031" minHeight="10.0" prefHeight="80.33332824707031" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="invDispensingOutField" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="inv-dispensing-out-text-field" text="Inventory (Dispensing OUT)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></TextField>
+                        <TextField fx:id="dateTimeField" opacity="0.6" prefHeight="55.0" prefWidth="300.0" style="-fx-font-size: 18; -fx-border-radius: 5;" styleClass="date-time-text-field" text="Select Date and Time" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <ToggleButton mnemonicParsing="false" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/calendar-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <GridPane.margin>
+                              <Insets left="260.0" />
+                           </GridPane.margin>
+                        </ToggleButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="55.0" right="5.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="108.0" prefWidth="1600.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <GridPane prefHeight="99.0" prefWidth="1290.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="17.333333015441895" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="357.66668701171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0" minWidth="0.0" prefWidth="55.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="795.6666870117188" minWidth="10.0" prefWidth="533.3333129882812" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="694.0000610351562" minWidth="10.0" prefWidth="201.6666259765625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="694.0000610351562" minWidth="10.0" prefWidth="201.6666259765625" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ToggleButton fx:id="toggleRecordConfirm" mnemonicParsing="false" prefHeight="63.0" prefWidth="932.0" style="-fx-font-size: 18; -fx-background-color: #2C2C2C; -fx-text-fill: white;" styleClass="treatment-record-confirm-btn" stylesheets="@../styles/fonts.css" text="Confirm" textFill="WHITE" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                        </ToggleButton>
+                        <ToggleButton fx:id="toggleRecordCancel" layoutX="20.0" layoutY="44.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="179.0" style="-fx-font-size: 18; -fx-background-color: white; -fx-text-fill: black; -fx-border-color: black;" styleClass="treatment-record-confirm-btn" stylesheets="@../styles/fonts.css" text="Cancel" textFill="WHITE" GridPane.columnIndex="5">
+                           <padding>
+                              <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </ToggleButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
