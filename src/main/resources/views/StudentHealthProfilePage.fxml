@@ -19,7 +19,7 @@
         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
     </padding>
 
-    <Label fx:id="welcomeText" />
+    <Label />
     <stylesheets>
 
         <URL value="@../styles/fonts.css" />
@@ -46,8 +46,8 @@
                   <TableColumn fx:id="AdviserColumn" prefWidth="241.60009765625" text="Adviser" />
               </columns>
             </TableView>
-            <Button fx:id="Filter_Button_A" layoutX="408.0" layoutY="145.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="118.0" text="A-Z" />
-            <Button fx:id="Filter_Button_Z" layoutX="544.0" layoutY="145.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="118.0" text="Z-A" />
+            <Button fx:id="FilterButtonAtoZ" layoutX="408.0" layoutY="145.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="118.0" text="A-Z" />
+            <Button fx:id="FilterButtonZtoA" layoutX="544.0" layoutY="145.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="118.0" text="Z-A" />
             <Button fx:id="ClearFilterButton" layoutX="677.0" layoutY="145.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="126.0" text="Clear Filter" />
             <ComboBox fx:id="SexComboBox" layoutX="167.0" layoutY="145.0" prefHeight="46.0" prefWidth="128.0" promptText="Sex" />
             <ImageView fitHeight="40.0" fitWidth="33.0" layoutX="29.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
@@ -65,8 +65,8 @@
                <image>
                   <Image url="@../assets/notification-icon.png" />
                </image></ImageView>
-            <Label fx:id="Adviser_Name" layoutX="1018.0" layoutY="23.0" text="Mrs.Adviser Dela Cruz" />
-            <Label fx:id="Adviser_Label" layoutX="1018.0" layoutY="50.0" prefHeight="19.0" prefWidth="64.0" text="Nurse" />
+            <Label fx:id="NurseNameLabel" layoutX="1018.0" layoutY="23.0" text="Mrs.Adviser Dela Cruz" />
+            <Label fx:id="NursePromptLabel" layoutX="1018.0" layoutY="50.0" prefHeight="19.0" prefWidth="64.0" text="Nurse" />
             <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="1206.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/dropdown-icon.png" />

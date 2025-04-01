@@ -23,7 +23,7 @@
 }
 
 
-#Adviser_Label{
+#AdviserNameLabel{
 
 -fx-font-weight: none;
 -fx-font-size: 12px;
@@ -83,12 +83,18 @@
 -fx-font-size: 25px;
 }
 
-#LabelStudent,#LabelStudentHealth{
+#LabelStudent,#LabelStudentHealthInfo{
  -fx-font-weight: 700;
  -fx-font-size:16px;
 }
 
 #LabelLRN,#LabelFirstname,#LabelLastname,#LabelSex,#LabelAge,#LabelGradeLevel,#LabelSection,#LabelContactNumber,#LabelHomeAddress,#LabelEmailAddress,#LabelEmailAddress{
 -fx-font-size:14px;
+
+}
+
+
+#NursePromptLabel {
+-fx-font-size:11px;
 
 }
