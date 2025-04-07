@@ -1,0 +1,51 @@
+name: Semantic Release
+
+on:
+  workflow_run:
+    workflows: ["Java CI"]
+    branches: [ master ]
+    types: [ completed ]
+
+jobs:
+  release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      - name: Install dependencies
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog
+
+      - name: Run Semantic Release dry run to get version
+        id: semantic
+        run: |
+          VERSION=$(npx semantic-release --dry-run | grep -oP 'The next release version is \K[0-9]+\.[0-9]+\.[0-9]+')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Update version in build files
+        if: ${{ steps.semantic.outputs.version != '' }}
+        run: |
+          echo "Updating version to $VERSION"
+          ant update-version -Dnew.version=$VERSION
+          sed -i "s/<property name=\"version\" value=\".*\"\/>/<property name=\"version\" value=\"$VERSION\"\/>/g" build.xml
+
+      - name: Build release artifacts
+        if: ${{ steps.semantic.outputs.version != '' }}
+        run: ant -noinput -buildfile build.xml release
+
+      - name: Run Semantic Release (final)
+        if: ${{ steps.semantic.outputs.version != '' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release
