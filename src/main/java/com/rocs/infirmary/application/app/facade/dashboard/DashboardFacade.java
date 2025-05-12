@@ -13,7 +13,12 @@ import java.util.List;
  */
 public interface DashboardFacade {
 
-    List<LowStockReport> findAllLowStockMedicine();
+    /**
+     * Checks for low stock items and sends notifications for each item.
+     *
+     * @return a list of LowStockItem objects that are low in stock.
+     */
+    List<LowStockReport> getAllLowStockMedicine();
 
     /**
      * Retrieves common ailments report from the database using the start date, end date, grade level, and section of student.
