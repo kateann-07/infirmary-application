@@ -14,6 +14,13 @@ public class MedicineInventoryFacadeImpl implements MedicineInventoryFacade {
     private MedicineInventoryDao medicineInventoryDao = new MedicineInventoryDaoImpl();
     private static final Logger logger = LoggerFactory.getLogger(MedicineInventoryFacadeImpl.class);
 
+    public MedicineInventoryFacadeImpl() {
+
+    }
+    public MedicineInventoryFacadeImpl(MedicineInventoryDao medicineInventoryDao) {
+        this.medicineInventoryDao = medicineInventoryDao;
+    }
+
     @Override
     public List<Medicine> findAllMedicine() {
         logger.info("Entering findAllMedicine");
