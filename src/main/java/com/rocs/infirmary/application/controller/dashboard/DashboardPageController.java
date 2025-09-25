@@ -36,7 +36,7 @@ public class DashboardPageController implements Initializable {
     private static final List<String> MONTHLY_CATEGORIES = List.of("Week 1", "Week 2", "Week 3", "Week 4", "Week 5");
     private static final List<String> YEARLY_CATEGORIES = List.of("June", "July", "August", "September", "October", "November",
             "December", "January", "February", "March");
-    private static final Logger logger = LoggerFactory.getLogger(DashboardPageController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DashboardPageController.class);
     private final DashboardInfoApplication dashboardInfoApplication = new DashboardInfoApplication();
     @FXML
     private Label dateDisplay;
@@ -73,6 +73,7 @@ public class DashboardPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        LOGGER.info("Initializing Dashboard Controller");
         initializeUI();
         loadDashboardData();
         weeklyStudentVisitReport.setOnAction(event -> populateCharts("weekly"));
@@ -93,6 +94,7 @@ public class DashboardPageController implements Initializable {
     }
 
     private void loadDashboardData() {
+        LOGGER.info("Dashboard data loading");
         try {
             DateRange dateRange = DateRange.daily();
 
@@ -101,10 +103,12 @@ public class DashboardPageController implements Initializable {
             populateCharts("weekly");
             populateTables();
 
-        } catch (NullPointerException e) {
-            logger.error("Failed to load dashboard data: {}", e.getMessage());
+            LOGGER.info("Dashboard data successfully loaded");
+        } catch (IllegalStateException e) {
+            LOGGER.error("Failed to load dashboard data", e);
         }
     }
+
 
     private void populateCharts(String view) {
         String GRADE_11 = "Grade 11";
@@ -119,34 +123,47 @@ public class DashboardPageController implements Initializable {
                 throw new IllegalArgumentException("Invalid view: " + view);
         }
 
+        LOGGER.info("Populating Charts");
         try {
             studentVisitBarChart.getData().clear();
             studentVisitBarChart.getYAxis().setLabel("Visits");
             initializeBarChartVisitByGrade(dateRange, GRADE_11, view);
             initializeBarChartVisitByGrade(dateRange, GRADE_12, view);
+
+            LOGGER.info("Charts successfully populated");
         } catch (NullPointerException e) {
-            logger.error("Failed to populate charts: {}", e.getMessage());
+            LOGGER.error("Failed to populate charts", e);
         }
     }
 
-    private void populateTables() {
+    private void populateTables() throws IllegalStateException {
+        LOGGER.info("Populating Tables");
         DateRange dateRange = DateRange.monthly();
-            populateTableMedicationTrendReport(dateRange);
-            populateTableCommonAilmentsReport(dateRange);
-        if (medTrendRptTable == null && totalDistributedMedTrend == null) {
-            logger.error("Medication Trend Report table or column is null");
+        populateTableMedicationTrendReport(dateRange);
+        populateTableCommonAilmentsReport(dateRange);
+
+        if (medTrendRptTable == null || totalDistributedMedTrend == null) {
+            throw new IllegalStateException("Medication Trend Report table is null");
         }
-        if (commonAilmentsRptTable == null && numOfStudCommonAilment == null) {
-            logger.error("Common Ailments Report table or column is null");
+
+        if (commonAilmentsRptTable == null || numOfStudCommonAilment == null) {
+            throw new IllegalStateException("Common Ailments Report table is null");
         }
+
         if (dashboardInfoApplication.getDashboardFacade() == null) {
-            logger.error("Dashboard Facade is null");
+            throw new IllegalStateException("Dashboard Facade is null");
         }
+
+        LOGGER.info("Tables successfully populated");
     }
+
 
     private void populateTableMedicationTrendReport(DateRange dateRange) {
         List<MedicationTrendReport> medicationTrendReports =
                 dashboardInfoApplication.getDashboardFacade().generateMedicationReport(dateRange.getStartDate(), dateRange.getEndDate());
+        LOGGER.debug("MedicationTrendReport from {} - {}: {}",
+                dateRange.getStartDate(), dateRange.getEndDate(), medicationTrendReports);
+
         ObservableList<MedicationTrendReport> dataMedTrend =
                 FXCollections.observableArrayList(medicationTrendReports);
         medTrendRptTable.setItems(dataMedTrend);
@@ -162,6 +179,10 @@ public class DashboardPageController implements Initializable {
 
         List<CommonAilmentsReport> reports = dashboardInfoApplication.getDashboardFacade().generateCommonAilmentReport(
                 dateRange.getStartDate(), dateRange.getEndDate(), gradeLevel, section);
+        LOGGER.debug("Common Ailments Report from {} - {}, gradeLevel='{}', section='{}': {}",
+                dateRange.getStartDate(), dateRange.getEndDate(), gradeLevel, section, reports);
+
+
         ObservableList<CommonAilmentsReport> observableCommonAilmentTable =
                 FXCollections.observableArrayList(reports);
         commonAilmentsRptTable.setItems(observableCommonAilmentTable);
@@ -178,13 +199,31 @@ public class DashboardPageController implements Initializable {
     }
 
     private void setClinicVisitReports(DateRange dateRange) {
+        LOGGER.info("Setting Clinic Visit Reports Started");
+
+        if (dateRange == null) {
+            LOGGER.error("Date Range is null");
+            return;
+        }
+
+        if (grade11ClinicVisitTodayRprt == null || grade12ClinicVisitTodayRprt == null) {
+            LOGGER.error("Setting Clinic Visit Reports not initialized");
+            return;
+        }
+
         String GRADE_11 = "Grade 11";
         String GRADE_12 = "Grade 12";
+
         int grade11Visits = getVisitCount(dateRange, GRADE_11);
         int grade12Visits = getVisitCount(dateRange, GRADE_12);
 
+        LOGGER.debug("Clinic visit reports set: Grade 11 = {}, Grade 12 = {}",
+                grade11Visits, grade12Visits);
+
         grade11ClinicVisitTodayRprt.setText(String.valueOf(grade11Visits));
         grade12ClinicVisitTodayRprt.setText(String.valueOf(grade12Visits));
+
+        LOGGER.info("Setting Clinic Visit Reports Finished");
     }
 
     private int getTotalMedicationUsage(DateRange dateRange) {
@@ -195,6 +234,9 @@ public class DashboardPageController implements Initializable {
 
     private void setMedicationDistributionReport(DateRange dateRange) {
         int totalUsage = getTotalMedicationUsage(dateRange);
+        LOGGER.debug("Medication distribution report from {} to {}: total usage = {}",
+                dateRange.getStartDate(), dateRange.getEndDate(), totalUsage);
+
         medDistributtedTodayRprt.setText(String.valueOf(totalUsage));
     }
 
@@ -264,6 +306,7 @@ public class DashboardPageController implements Initializable {
             int visits = visitsPerCategory.getOrDefault(category, 0);
             series.getData().add(new XYChart.Data<>(category, visits));
         }
+
         studentVisitBarChart.getData().add(series);
     }
 
