@@ -2,8 +2,10 @@ package com.rocs.infirmary.application.app.facade.medicine.inventory.impl;
 import com.rocs.infirmary.application.data.dao.medicine.inventory.MedicineInventoryDao;
 import com.rocs.infirmary.application.app.facade.medicine.inventory.MedicineInventoryFacade;
 import com.rocs.infirmary.application.data.dao.medicine.inventory.impl.MedicineInventoryDaoImpl;
+import com.rocs.infirmary.application.data.model.inventory.Inventory;
 import com.rocs.infirmary.application.data.model.inventory.medicine.Medicine;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -60,12 +62,22 @@ public class MedicineInventoryFacadeImpl implements MedicineInventoryFacade {
     }
 
     @Override
+    public List<Medicine> findAllMedicine() {
+        LOGGER.info("Entering findAllMedicine()");
+        List<Medicine> medicineInventoryList = medicineInventoryDao.findAllMedicine();
+        LOGGER.info("Exiting findAllMedicine()");
+        return medicineInventoryList;
+    }
+
+    @Override
     public boolean addMedicine(Medicine medicine) {
         LOGGER.debug("Entering addMedicine with Name: {} and Description: {}", medicine.getItemName(), medicine.getDescription());
         boolean isAdded = medicineInventoryDao.addMedicine(medicine);
         LOGGER.debug("Exiting addMedicine for '{}'", medicine.getItemName());
         return isAdded;
     }
+
+
 
     @Override
     public boolean addInventory(Long medicineId, String itemType, int quantity, Date expirationDate) {
